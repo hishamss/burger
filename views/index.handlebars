@@ -4,24 +4,7 @@
     {{/each}}
 </ul>
 <form id="addburger">
+
     <textarea id="newburger"></textarea>
     <button type="submit">Add</button>
 </form>
-
-<script>
-    $("#addburger").on("submit", function (event) {
-        event.preventDefault();
-
-        var postobj = {
-            newburger: $("#newburger").val().trim()
-        };
-        console.log("newburger: ", newburger);
-        $.ajax("/api/burger", {
-            type: "POST",
-            data: postobj,
-        }).then(function () {
-            location.reload();
-        });
-    });
-
-</script>
