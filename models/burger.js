@@ -6,6 +6,11 @@ var burger = {
       cb(res);
     });
   },
+  add: function (tablename, colname, value, cb) {
+    orm.insertOne(tablename, colname, value, function (res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = burger;

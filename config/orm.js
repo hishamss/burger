@@ -7,7 +7,16 @@ var orm = {
       cb(result);
     });
   },
-  //   insertOne: function() {},
+  insertOne: function (tablename, ColName, value, cb) {
+    var sqlquery = "insert into ?? (??) value (?)";
+    connection.query(sqlquery, [tablename, ColName, value], function (
+      err,
+      result
+    ) {
+      if (err) throw err;
+      cb(result);
+    });
+  },
   //   updateOne: function() {}
 };
 
