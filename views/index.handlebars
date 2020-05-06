@@ -1,10 +1,26 @@
-<ul>
-    {{#each burger}}
-    <li>ID: {{id}}, Name: {{burger_name}}, Devoured: {{devoured}}</li>
-    {{/each}}
-</ul>
-<form id="addburger">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                {{#each burger}}
+                <li id={{id}}>{{burger_name}}. <button class="devour" data-id={{id}}>Devour
+                        it!</button><button class="remove" data-id={{id}}>Remove Burger</button></li>
+                {{/each}}
+            </ul>
 
-    <textarea id="newburger"></textarea>
-    <button type="submit">Add</button>
-</form>
+        </div>
+        <div class="col-md-6 ">
+            <ul id="devourDiv">
+
+            </ul>
+        </div>
+    </div>
+    <div class="text-center">
+        <form id="addburger">
+
+            <textarea id="newburger"></textarea>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+</div>

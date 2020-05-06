@@ -10,9 +10,24 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burger", function (req, res) {
-  console.log("POST request: ", req.body.newburger);
   burger.add("burgers", "burger_name", req.body.newburger, function (result) {
     res.json({ id: result.insertId });
+  });
+});
+
+router.put("/api/burger/:id", function (req, res) {
+  burger.update("burgers", "devoured", req.params.id, function (result) {
+    if (result.changedRows === 0) {
+      return res.status(404).end();
+    }
+    res.status(200).end();
+  });
+});
+
+router.delete("/api/burger/:id", function (req, res) {
+  burger.delete("burgers", req.params.id, function (result) {
+    console.log("delete response", result);
+    res.status(200).end();
   });
 });
 module.exports = router;

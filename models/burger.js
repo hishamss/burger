@@ -11,6 +11,16 @@ var burger = {
       cb(res);
     });
   },
+  update: function (tablename, colname, id, cb) {
+    orm.updateOne(tablename, colname, id, function (res) {
+      cb(res);
+    });
+  },
+  delete: function (tablename, id, cb) {
+    orm.deleteone(tablename, id, function (res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = burger;
