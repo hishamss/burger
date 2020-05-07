@@ -12,9 +12,7 @@ $("#addburger").on("submit", function (event) {
 });
 $(".devour").on("click", function () {
   var id = $(this).data("id");
-  var BurgerName = $("#" + id)
-    .text()
-    .split(".")[0];
+  var BurgerName = $("#" + id + "> p").text();
   $.ajax("/api/burger/" + id, {
     type: "PUT",
   }).then(function () {
