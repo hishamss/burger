@@ -1,26 +1,35 @@
-<div class="container">
+<div class="container" style="margin-top:15px;">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4 border">
             <ul>
                 {{#each burger}}
+                {{#unless devoured}}
                 <li id={{id}}>{{burger_name}}. <button class="devour" data-id={{id}}>Devour
                         it!</button><button class="remove" data-id={{id}}>Remove Burger</button></li>
+                {{/unless}}
                 {{/each}}
             </ul>
 
         </div>
-        <div class="col-md-6 ">
+        <div class="col-md-4 border"><img class="img-fluid img-thumbnail" src="../public/assets/images/logo.jpg"></div>
+        <div class="col-md-4 border">
             <ul id="devourDiv">
-
+                {{#each burger}}
+                {{#if devoured}}
+                <li>{{burger_name}}</li>
+                {{/if}}
+                {{/each}}
             </ul>
         </div>
     </div>
-    <div class="text-center">
-        <form id="addburger">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 border">
+            <form id="addburger">
+                <textarea id="newburger"></textarea>
+                <button type="submit">Add</button>
+            </form>
+        </div>
 
-            <textarea id="newburger"></textarea>
-            <button type="submit">Add</button>
-        </form>
     </div>
 
 </div>
