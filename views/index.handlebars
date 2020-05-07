@@ -1,6 +1,6 @@
-<div class="container" style="margin-top:15px;">
+<div class="container" style="margin-top:100px;">
     <div class="row">
-        <div class="col-md-4 border">
+        <div class="col-md-4 ">
             <ul>
                 {{#each burger}}
                 {{#unless devoured}}
@@ -11,8 +11,8 @@
             </ul>
 
         </div>
-        <div class="col-md-4 border"><img class="img-fluid img-thumbnail" src="../public/assets/images/logo.jpg"></div>
-        <div class="col-md-4 border">
+        <div class="col-md-4 "><img class="img-fluid" src="/assets/images/logo.jpg"></div>
+        <div class="col-md-4 ">
             <ul id="devourDiv">
                 {{#each burger}}
                 {{#if devoured}}
@@ -22,11 +22,14 @@
             </ul>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 offset-md-4 border">
-            <form id="addburger">
-                <textarea id="newburger"></textarea>
-                <button type="submit">Add</button>
+    <div class="row"></div>
+    <div class="row mt-5">
+        <div class="col-md-4 offset-md-4 ">
+            <form class="form-inline justify-content-center" id="addburger">
+                <div class="form-group mr-2">
+                    <input id="newburger" type="text" class="form-control" placeholder="Add Burger to Devour">
+                </div>
+                <button type="submit" class="btn btn-primary"><strong>Add</strong></button>
             </form>
         </div>
 
