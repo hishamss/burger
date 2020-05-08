@@ -8,9 +8,10 @@ Eat-Da-Burger: it's a burger logger with MySQL, Node, Express, Handlebars and a 
 <hr>
 
 1. Type the name of the burger you would like to devour.
-2. After you click, the burger name will be added to the DB with default devoured value of false.
-3. If you click "devour it" button, the burger will be moved to the 'Devoured Burgers' menue and it's devoured value in the DB will be set to true. If you click on delete burger, the burger will be deleted from the DB and the left menu.
-4. Then when you refresh the main page, burger with devoured value of false will be display on the left and with devoured value of true will be displayed on the right.
+2. Click Add button to submit to add the burger to the DB with default devoured value of false.
+3. If you click "devour it" button, the burger will be moved to the 'Devoured Burgers' menue and it's devoured value in the DB will be set to true.
+4. Delete burger button will delete the burger from the DB and the left menu.
+5. Loading the main page will show the burgers with devoured value of false on the left menue and the burgers with devoured value of true on the right.
    !["App Video"](public\assets\media\app-video.gif)
 
 <h2>Technology Used</h2>
