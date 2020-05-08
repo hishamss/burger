@@ -1,4 +1,4 @@
-# burger
+# Burger
 
 <h1><a href="https://burger-hss.herokuapp.com/">Website Link</a></h1>
 
