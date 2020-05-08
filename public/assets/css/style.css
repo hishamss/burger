@@ -57,7 +57,11 @@ input[type="text"]::placeholder {
   font-size: 20px;
 }
 
-.fas:hover {
+.fa-times-circle:hover {
+  color: #9ece37;
+}
+
+.fa-utensils:hover {
   color: #9ece37;
 }
 
