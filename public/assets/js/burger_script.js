@@ -18,7 +18,11 @@ $(".devour").on("click", function () {
   }).then(function () {
     console.log("updated");
     $("#" + id).remove();
-    $("#devourDiv").append("<li>" + BurgerName + "</li>");
+    $(".devourDiv").append(
+      '<div><i class="fas fa-hamburger"></i>&nbsp<p style="display: inline-block;">' +
+        BurgerName +
+        "</p></div>"
+    );
   });
 });
 

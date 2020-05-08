@@ -2,11 +2,16 @@ body {
   background-color: #5f597f;
   margin: 0;
   padding: 0;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Fjalla One", sans-serif;
 }
 
 .toDevour {
   color: #5f597f;
+}
+
+.devourDiv {
+  color: #5f597f;
+  opacity: 0.6;
 }
 [type="submit"] {
   background: #f6ca67;
@@ -23,12 +28,13 @@ body {
   color: #5f597f;
 }
 
-[type="text"] {
+input[type="text"] {
   height: 56px !important;
   border-radius: 13px;
+  color: #5f597f !important;
 }
 
-[type="text"]::placeholder {
+input[type="text"]::placeholder {
   color: #5f597f;
   opacity: 0.3;
 }
@@ -45,4 +51,16 @@ body {
 
 .card-header {
   color: #5f597f;
+}
+
+.fas {
+  font-size: 20px;
+}
+
+.fas:hover {
+  color: #9ece37;
+}
+
+.legends {
+  color: #9ece37;
 }
